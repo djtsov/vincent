@@ -1,0 +1,6 @@
+<form method="POST" action="{% url 'remove_task'%}" 
+      id="remove-task-{{todo.id}}-form-id">
+  {% csrf_token %}
+  <input type="hidden" name="task_id" value='{{todo.id}}'/>
+</form>
+<button class="btn" onclick="submitDeleteTask({{todo.id}});" >REMOVE</button>

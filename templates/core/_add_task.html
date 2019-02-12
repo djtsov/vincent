@@ -1,0 +1,7 @@
+
+<form method="POST" action="{% url 'add_task'%}" id="add-task-form-id">
+  {% csrf_token %}
+  <div class="form-group">
+    {{form.as_p}}
+  </div>
+</form>

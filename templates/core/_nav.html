@@ -1,0 +1,6 @@
+  <div>
+    <a href="{% url 'logout'%}" class="btn">Logout</a>
+    <a href="#add_task_modal" class="btn btn-success">Add task</a>
+    <a href="{% url 'index'%}?sort=due_date" class="btn {%if 'due_date' in sort_list %}btn-primary{% endif %}">Sort by due date</a>
+    <a href="{% url 'index'%}?sort=priority" class="btn {%if 'priority' in sort_list %}btn-primary{% endif %}">Sort by priority</a>
+  </div>

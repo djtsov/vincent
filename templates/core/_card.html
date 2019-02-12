@@ -1,0 +1,13 @@
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title h5">{{todo.title}}</div>
+        <div class="card-subtitle text-gray">{{todo.due_date|date:"Y-m-d"}}</div>
+        <div class="card-subtitle text-gray">{{todo.get_priority_display}}</div>
+      </div>
+      <div class="card-body">
+        {{todo.description | default_if_none:"no description"}}
+      </div>
+      <div class="card-footer">
+        {% include "core/_remove_task.html" with todo=todo %}
+      </div>
+    </div>
